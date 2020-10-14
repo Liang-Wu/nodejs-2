@@ -8,7 +8,8 @@ const getGeocode = (address, callback)=>{
         else {
             const data ={
                 lat:body.features[0].center[1],
-                lon:body.features[0].center[0]
+                lon:body.features[0].center[0],
+                location: body.features[0].place_name
             }
             callback(undefined, data)
         }
